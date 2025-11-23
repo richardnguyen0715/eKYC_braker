@@ -205,3 +205,23 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
+# Data files
+*.csv
+*.tsv
+*.parquet
+*.pkl
+*.jpeg
+*.jpg
+*.png
+
+
+# Machine learning models
+*.h5
+*.model
+*.ckpt
+*.pt
+*.pth
+*.sav
+*.bin
