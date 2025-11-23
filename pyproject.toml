@@ -1,0 +1,17 @@
+[project]
+name = "ekyc-braker"
+version = "0.1.0"
+description = "End-to-End AI Pipeline to Extract Information on National ID Card or Others"
+authors = [
+    {name = "tuong.nguyen",email = "richardnguyen0715@gmail.com"}
+]
+license = {text = "MIT License"}
+readme = "README.md"
+requires-python = ">=3.11, <3.14"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
