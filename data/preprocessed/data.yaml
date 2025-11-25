@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 5
+names: ['Card issuer', 'Card number', 'Cardholder', 'Expiry date', 'Payment network']
+
+roboflow:
+  workspace: karthik-b1wgt
+  project: credit-card-object-detection
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/karthik-b1wgt/credit-card-object-detection/dataset/1

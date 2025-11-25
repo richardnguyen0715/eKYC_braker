@@ -1,3 +1,5 @@
 data_path:
   raw_data: data/raw/
+  raw_data_config: data/raw/data.yaml
   processed_data: data/processed/
+  processed_data_config: data/processed/data.yaml

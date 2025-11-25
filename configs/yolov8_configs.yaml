@@ -1,0 +1,11 @@
+model_version: yolov8m.pt
+data_path: data/raw/data.yaml
+workers: 4
+epochs: 100
+lr: 0.001
+weight_decay: 0.0005
+optimizer: "SGD"
+batch_size: 16
+num_workers: 4
+image_size: 640
+patience: 10

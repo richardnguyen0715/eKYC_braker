@@ -1,0 +1,1 @@
+python -m src.pipeline.trainer.train_yolo

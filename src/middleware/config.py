@@ -5,11 +5,14 @@ data_config = load_config('configs/data_configs.yaml')
 logger_config = load_config('configs/logging_configs.yaml')
 model_config = load_config('configs/model_configs.yaml')
 warn_exception_config = load_config('configs/warning_configs.yaml')
+yolo_config = load_config('configs/yolov8_configs.yaml')
     
 
 # Dataconfig parameters ---------------------------------------------
 raw_data = data_config.get('data_path', {}).get('raw_data', "data/raw/")
+raw_data_config = data_config.get('data_path', {}).get('raw_data_config', "data/raw/data.yaml")
 processed_data = data_config.get('data_path', {}).get('processed_data', "data/processed/")
+processed_data_config = data_config.get('data_path', {}).get('processed_data_config', "data/processed/data.yaml")
 
 # Model config parameters ------------------------------------------
 
@@ -69,3 +72,20 @@ cpu_max_memory_percent = warn_exception_config.get('cpu_monitor', {}).get('max_c
 gpu_memory_check_interval = warn_exception_config.get('gpu_monitor', {}).get('gpu_memory_check_interval', 60)  # in seconds
 gpu_warn_threshold_percent = warn_exception_config.get('gpu_monitor', {}).get('warn_threshold_percent', 70)
 gpu_max_memory_percent = warn_exception_config.get('gpu_monitor', {}).get('max_gpu_memory_percent', 85)
+
+
+# YOLO model parameters ------------------------------------------
+class YoloConfig:
+    def __init__(
+        self
+    ):
+        self.model_version = yolo_config.get('model_version', 'yolov8m.pt')
+        self.epochs = yolo_config.get('epochs', 50)
+        self.workers = yolo_config.get('workers', 4)
+        self.img_size = yolo_config.get('img_size', 640)
+        self.batch_size = yolo_config.get('batch_size', 16)
+        self.epochs = yolo_config.get('epochs', 50)
+        self.optimizer = yolo_config.get('optimizer', 'SGD')
+        self.lr0 = yolo_config.get('lr0', 0.01)
+        self.patience = yolo_config.get('patience', 10)
+        self.data_path = yolo_config.get('data_path', 'data/yolo/data.yaml')
