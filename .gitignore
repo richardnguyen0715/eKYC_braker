@@ -221,6 +221,7 @@ Thumbs.db
 *.jpg
 *.png
 *.pyc
+*.cache
 
 
 # Machine learning models
